@@ -22,10 +22,10 @@ pipeline {
 		always {
 			echo 'if failed or pass print result'
 		}
-		Success {
+		success {
 			echo 'build is successfull'
 		}
-		Failure {
+		failure {
 			echo 'Build failed'
 		}
 	}
