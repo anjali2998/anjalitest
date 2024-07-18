@@ -7,12 +7,12 @@ pipeline {
 				echo 'Buliding my first project'
 			}
 		}
-		Stage('Test') {
+		stage('Test') {
 			steps{
 				echo 'Testing'
 			}
 		}
-		Stage('Deploy') {
+		stage('Deploy') {
 			steps{
 				echo 'deploying'
 			}
@@ -22,10 +22,10 @@ pipeline {
 		always {
 			echo 'if failed or pass print result'
 		}
-		Success {
+		success {
 			echo 'build is successfull'
 		}
-		Failure {
+		failure {
 			echo 'Build failed'
 		}
 	}
