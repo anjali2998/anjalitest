@@ -7,25 +7,25 @@ pipeline {
 				echo 'Buliding my first project'
 			}
 		}
-		Stage ('Test'){
+		Stage ('Test') {
 			steps{
 				echo 'Testing'
 			}
 		}
-		Stage ('Deploy'){
+		Stage ('Deploy') {
 			steps{
 				echo 'deploying'
 			}
 		}
 	}
 	post{
-		always{
+		always {
 			echo 'if failed or pass print result'
 		}
-		Success{
+		Success {
 			echo 'build is successfull'
 		}
-		Failure{
+		Failure {
 			echo 'Build failed'
 		}
 	}
