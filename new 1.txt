@@ -1,0 +1,23 @@
+Connect to bitbucket server
+ssh dftscm@bb-stg-1
+
+start and stop services
+
+sudo /bin/systemctl start bitbucket.service
+sudo /bin/systemctl stop bitbucket.service
+
+
+log file details path
+/apps/dftscm/DFTSTASH_HOME/log ---> ( atlassian-bitbucket.log)--> this is the log file
+
+for checking the log details for some lines
+tail -fn 100 atlassian-bitbucket.log
+
+chekcing disk usage/memory for all files
+du -sch *
+
+To cleanup jenkins_home space --->
+
+cd /apps/dftjenkins/local/dft-scripts
+nohup sh -x artifacts_remove.sh &
+tail -f nohup.out
